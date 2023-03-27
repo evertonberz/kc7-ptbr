@@ -60,7 +60,7 @@ class ProcessEvent(Process):
 
     def get_kql_repr():
         return (
-            "ProcessEvents",
+            "Processos",
             {
                 "timestamp":"datetime",
                 "parent_process_name":"string",

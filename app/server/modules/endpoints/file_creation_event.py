@@ -55,7 +55,7 @@ class FileCreationEvent(File):
     def get_kql_repr() -> tuple:
         """Returns table:str, columns:dict"""
         return (
-            'FileCreationEvents',  # table name in KQL
+            'ArquivosCriados',  # table name in KQL
             {                     # dict representation of column names:types
                 'timestamp': 'datetime',
                 'hostname': 'string',

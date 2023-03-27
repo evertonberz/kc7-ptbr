@@ -98,7 +98,7 @@ class Trigger:
         )
 
         # This will come from the filesystem controller
-        upload_endpoint_event_to_azure(file_creation_event, table_name="FileCreationEvents")
+        upload_endpoint_event_to_azure(file_creation_event, table_name="ArquivosCriados")
 
         # if user runs the file then beacon from user machine
         # there should be a condition here

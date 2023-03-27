@@ -27,7 +27,7 @@ def upload_employee_to_azure(employee: Employee) -> None:
 
     LOG_UPLOADER.send_request(
         data=employee.stringify(),
-        table_name="Employees")
+        table_name="Funcionarios")
 
 
 def create_company():

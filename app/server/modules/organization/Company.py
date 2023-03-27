@@ -290,7 +290,7 @@ class Employee(Base):
         The column_types dict contains a mapping of column_name:data_type
         """
         return (
-            "Employees",  # table name
+            "Funcionarios",  # table name
             {             # type dict
                 "timestamp":"datetime",
                 "name": "string",

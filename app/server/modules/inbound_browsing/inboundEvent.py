@@ -42,7 +42,7 @@ class InboundBrowsingEvent:
     @staticmethod
     def get_kql_repr():
         return (
-            "InboundBrowsing",         # table name
+            "NavegacaoInterna",         # table name
             {                           # type dict
                   "timestamp": "datetime",
                   "method": "string",

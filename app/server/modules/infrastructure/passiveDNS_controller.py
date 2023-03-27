@@ -131,4 +131,4 @@ def upload_dns_records_to_azure(dns_records):
     for record in dns_records:
         LOG_UPLOADER.send_request(
             data=record,
-            table_name="PassiveDns")
+            table_name="DnsPassivo")

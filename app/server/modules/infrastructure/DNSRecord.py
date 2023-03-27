@@ -25,7 +25,7 @@ class DNSRecord(Base):
     @staticmethod
     def get_kql_repr():
         return (
-            "PassiveDns",
+            "DnsPassivo",
             {
                 "timestamp": "datetime",
                 "ip":"string",

@@ -52,7 +52,7 @@ def gen_system_files_on_host(count_of_events:int=2) -> None:
             )
             file_creation_events.append(file_creation_event)
         
-    upload_endpoint_event_to_azure(file_creation_events, table_name="FileCreationEvents")    
+    upload_endpoint_event_to_azure(file_creation_events, table_name="ArquivosCriados")    
 
 
 @timing
@@ -105,7 +105,7 @@ def gen_system_processes_on_host(count_of_user_events:int=2) -> None:
             process_events.append(process_event)
 
         # print(f"uploading {len(process_events)}  events to ADX")
-        upload_endpoint_event_to_azure(process_events, table_name="ProcessEvents")
+        upload_endpoint_event_to_azure(process_events, table_name="Processos")
     
     
 
@@ -216,7 +216,7 @@ def write_file_to_host(hostname: str, timestamp: float, file: File) -> None:
             sha256=file.sha256,
             size=file.size
         ),
-        table_name="FileCreationEvents"
+        table_name="ArquivosCriados"
     )
 
 def create_process_on_host(hostname: str, timestamp: float, parent_process_name: str, parent_process_hash: str, process: Process, username:str):
@@ -234,5 +234,5 @@ def create_process_on_host(hostname: str, timestamp: float, parent_process_name:
             process_hash=process.process_hash,
             username=username
         ),
-        table_name="ProcessEvents"
+        table_name="Processos"
     )

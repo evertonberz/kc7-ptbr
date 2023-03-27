@@ -152,6 +152,6 @@ def upload_auth_event_to_azure(auth_event: AuthenticationEvent):
     from app.server.game_functions import LOG_UPLOADER
     LOG_UPLOADER.send_request(
             data = auth_event.stringify(),
-            table_name= "AuthenticationEvents")
+            table_name= "Autenticacao")
 
 

@@ -32,7 +32,7 @@ class AuthenticationEvent:
     def get_kql_repr() -> tuple:
         """Returns table:str, columns:dict"""
         return (
-            'AuthenticationEvents',  # table name in KQL
+            'Autenticacao',  # table name in KQL
             {                     # dict representation of column names:types
                 'timestamp': 'datetime',
                 'hostname': 'string',
